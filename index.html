@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quest Board</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <h1>Quest Board</h1>
+      <!-- ===== NEW LEVEL SYSTEM UI ===== -->
+      <div class="level-container">
+        <div class="level-info">
+          <span class="level-text"
+            >Level <span id="current-level">1</span></span
+          >
+          <span class="quests-text"
+            ><span id="quests-completed">0</span>/<span id="quests-needed"
+              >5</span
+            >
+            Quests Completed</span
+          >
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <!-- ===== ACTION BUTTONS ===== -->
+      <div class="action-buttons">
+        <!-- Main Actions (Left) -->
+        <div class="button-group">
+          <button id="quest-log-button" class="action-btn">
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18">
+              <path
+                fill="currentColor"
+                d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"
+              />
+            </svg>
+            <span>Quest Log</span>
+          </button>
+        </div>
+
+        <!-- Backup Actions (Right) -->
+        <div class="button-group">
+          <button id="export-data" class="action-btn">
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18">
+              <path
+                fill="currentColor"
+                d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"
+              />
+            </svg>
+            <span>Export</span>
+          </button>
+          <button id="import-data" class="action-btn">
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18">
+              <path
+                fill="currentColor"
+                d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"
+              />
+            </svg>
+            <span>Import</span>
+          </button>
+          <input type="file" id="import-file" accept=".json" hidden />
+        </div>
+      </div>
+
+      <!-- ===== QUEST LOG MODAL ===== -->
+      <div id="quest-log-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>📜 Quest Log</h2>
+          <ul id="completed-quests-list"></ul>
+        </div>
+      </div>
+
+      <!-- ===== MAIN QUEST INPUT ===== -->
+      <div class="wrapper">
+        <form>
+          <input
+            id="todo-input"
+            type="text"
+            placeholder="Write your quest and hit enter..."
+            autocomplete="off"
+          />
+          <button id="add-button">ADD QUEST</button>
+        </form>
+        <ul id="todo-list"></ul>
+      </div>
+    </div>
+
+    <!-- ===== AUDIO ELEMENTS ===== -->
+    <audio
+      id="quest-complete-sound"
+      src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3"
+      preload="auto"
+    ></audio>
+    <audio
+      id="level-up-sound"
+      src="https://assets.mixkit.co/sfx/preview/mixkit-unlock-game-notification-253.mp3"
+      preload="auto"
+    ></audio>
+
+    <!-- ===== LEVEL UP MODAL ===== -->
+    <div id="level-up-modal" class="level-up-modal">
+      <div class="level-up-content">
+        <div class="level-up-header">
+          <span class="level-up-close">&times;</span>
+          <h2>LEVEL UP!</h2>
+          <div class="sparkle-container" id="sparkle-container"></div>
+        </div>
+
+        <div class="level-display">
+          <div class="level-pill old-level">
+            <span>Lv. <span id="old-level">1</span></span>
+          </div>
+          <div class="arrow-container">
+            <div class="arrow-line"></div>
+            <div class="arrow-head"></div>
+          </div>
+          <div class="level-pill new-level">
+            <span>Lv. <span id="new-level">2</span></span>
+          </div>
+        </div>
+
+        <p class="level-message">New challenges await!</p>
+
+        <div class="level-up-footer">
+          <button class="continue-button">Continue Your Journey</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
