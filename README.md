@@ -1,5 +1,5 @@
 # Daily-Quests-Solo-Leveling
-
+![Daily Quests Screenshot](screenshot.PNG)
 [![Live Demo](https://img.shields.io/badge/Live-Demo-purple?style=for-the-badge)](https://shahzaib-d-memon.github.io/Daily-Quests-Solo-Leveling/)
 
 ## Overview
