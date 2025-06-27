@@ -1,6 +1,6 @@
 # Daily-Quests-Solo-Leveling
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-purple?style=for-the-badge)]([https://your-demo-link.com](https://shahzaib-d-memon.github.io/Daily-Quests-Solo-Leveling/)) 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-purple?style=for-the-badge)](https://shahzaib-d-memon.github.io/Daily-Quests-Solo-Leveling/)
 
 ## Overview
 
