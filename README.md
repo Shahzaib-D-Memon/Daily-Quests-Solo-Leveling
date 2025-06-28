@@ -69,4 +69,5 @@ Contributions are welcome! Please fork the repository and create a pull request 
 
 ---
 
+
 **Embark on your productivity journey today! Turn everyday tasks into epic quests and watch your character (and accomplishments) grow!**
