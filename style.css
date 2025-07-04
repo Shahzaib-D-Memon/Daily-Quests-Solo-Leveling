@@ -5,8 +5,7 @@
   --accent-color: #9c4dff; /* Neon purple */
   --accent-glow: 0 0 10px #9c4dff66; /* Purple glow */
   --text-color: #f0e6ff; /* Soft purple-white */
-  --shadow: 0 4px 20px #00000080;
-  
+  --shadow: 0 4px 20px #00000080; 
 }
 
 * {
